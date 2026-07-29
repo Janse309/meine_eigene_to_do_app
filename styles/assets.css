@@ -1,0 +1,14 @@
+.btn {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.submit-btn {
+    padding: 8px;
+    font-family: "Playpen Sans", sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    width: 250px;
+    font-weight: bold;
+}
