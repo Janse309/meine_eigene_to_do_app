@@ -26,8 +26,9 @@ function renderTasks() {
     for (let i = 0; i < allTasks.length; i++) {
         taskRef.innerHTML += `
             <ul>
-                <input type="checkbox" name="task">
+                <input type="checkbox" name="task" onchange="checkOffToDos(this)">
                 <span>${allTasks[i]}</span>
+                <button class="btn-font">Delete</button>
             </ul>
                 `
     }
@@ -50,17 +51,14 @@ async function getData(path = "") {
 }
 
 async function loadTasks() {
-    let tasks = await getData("tasks"); // tasks laden
-    allTasks = []; 
+    let tasks = await getData("tasks");
+    allTasks = [];
 
     for (let id in tasks) {
         allTasks.push(tasks[id].Aufgabe);
     }
-
     renderTasks();
 }
-
-
 
 
 
