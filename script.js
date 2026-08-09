@@ -86,7 +86,7 @@ function checkOffToDos(checkbox) {
 
 
 
-// Delete Data einfügen
+// papierkorb icon hinzufügen
 // deleteData Dokumentation lesen
 
 // - allTasks ist jetzt ein Array von Objekten -> task.Aufgabe statt allTasks[i]
