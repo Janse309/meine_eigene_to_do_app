@@ -28,6 +28,8 @@ h1{
     padding: 8px;
     font-size: bold;
     border: 2px solid black;
+    outline: none;
+    font-family: "Playpen Sans", sans-serif;
 }
 
 .main-content-container{
