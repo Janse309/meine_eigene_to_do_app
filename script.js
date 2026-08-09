@@ -60,6 +60,16 @@ async function loadTasks() {
     renderTasks();
 }
 
+function checkOffToDos(checkbox) {
+    let label = checkbox.nextElementSibling;
+
+    if (checkbox.checked) {
+        label.classList.add('checked');
+    } else {
+        label.classList.remove('checked');
+    }
+}
+
 
 
 // Delete Data einfügen
