@@ -20,6 +20,11 @@ async function addTask(event) {
     inputContent.value = "";
 }
 
+function deleteTask(i) {
+    allTasks.splice(i, 1);
+    renderTasks();       
+}
+
 function renderTasks() {
     let taskRef = document.getElementById('content-area');
     taskRef.innerHTML = "";
@@ -28,7 +33,7 @@ function renderTasks() {
             <ul>
                 <input type="checkbox" name="task" onchange="checkOffToDos(this)">
                 <span>${allTasks[i]}</span>
-                <button class="btn-font">Delete</button>
+                <button onclick="deleteTask(${i})" class="btn-font">Delete</button>
             </ul>
                 `
     }
