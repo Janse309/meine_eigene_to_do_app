@@ -12,17 +12,18 @@ async function addTask(event) {
 
     let inputContent = document.getElementById('task-input');
     let taskInput = inputContent.value;
+    let response = await postData("tasks", { Aufgabe: taskInput });
+    allTasks.push({ Aufgabe: taskInput, id: response.name});
 
-    allTasks.push(taskInput);
-    await postData("tasks", { Aufgabe: taskInput });
-    console.log(allTasks);
     renderTasks();
     inputContent.value = "";
 }
 
-function deleteTask(i) {
+async function deleteTask(i) {
+    let id = allTasks[i].id;
     allTasks.splice(i, 1);
-    renderTasks();       
+    renderTasks();
+    await deleteData("tasks/" + id);
 }
 
 function renderTasks() {
@@ -32,7 +33,7 @@ function renderTasks() {
         taskRef.innerHTML += `
             <ul>
                 <input type="checkbox" name="task" onchange="checkOffToDos(this)">
-                <span>${allTasks[i]}</span>
+                <span>${allTasks[i].Aufgabe}</span>
                 <button onclick="deleteTask(${i})" class="btn-font">Delete</button>
             </ul>
                 `
@@ -50,9 +51,15 @@ async function postData(path = "", data = {}) {
 
 async function getData(path = "") {
     let response = await fetch(BASE_URL + path + ".json");
-    let data = await response.json();
-    console.log(data);
-    return data;
+    return data = await response.json();
+}
+
+async function deleteData(path = "") {
+    let response = await fetch(BASE_URL + path + ".json", {
+        method: "DELETE",
+    });
+    console.log(path)
+    return responseToJson = await response.json();
 }
 
 async function loadTasks() {
@@ -60,9 +67,10 @@ async function loadTasks() {
     allTasks = [];
 
     for (let id in tasks) {
-        allTasks.push(tasks[id].Aufgabe);
+        allTasks.push({ id: id, Aufgabe: tasks[id].Aufgabe });
     }
     renderTasks();
+    console.log(allTasks);
 }
 
 function checkOffToDos(checkbox) {
@@ -74,6 +82,7 @@ function checkOffToDos(checkbox) {
         label.classList.remove('checked');
     }
 }
+
 
 
 
