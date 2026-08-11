@@ -34,7 +34,7 @@ function renderTasks() {
             <ul class="to-dos">
                 <input type="checkbox" name="task" onchange="checkOffToDos(this)">
                 <span>${allTasks[i].Aufgabe}</span>
-                <button class="btn to-do-btn" onclick="deleteTask(${i})" class="btn-font"><img src="./assets/icons/delete-icon.svg" alt="delete"</button>
+                <button class="btn to-do-btn" onclick="deleteTask(${i})" class="btn-font"><img src="../assets/icons/delete-icon.svg" alt="delete"></button>
             </ul>
                 `
     }
