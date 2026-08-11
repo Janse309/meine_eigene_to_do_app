@@ -31,10 +31,10 @@ function renderTasks() {
     taskRef.innerHTML = "";
     for (let i = 0; i < allTasks.length; i++) {
         taskRef.innerHTML += `
-            <ul>
+            <ul class="to-dos">
                 <input type="checkbox" name="task" onchange="checkOffToDos(this)">
                 <span>${allTasks[i].Aufgabe}</span>
-                <button onclick="deleteTask(${i})" class="btn-font">Delete</button>
+                <button class="btn to-do-btn" onclick="deleteTask(${i})" class="btn-font"><img src="./assets/icons/delete-icon.svg" alt="delete"</button>
             </ul>
                 `
     }

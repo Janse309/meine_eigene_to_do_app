@@ -49,6 +49,13 @@ ul{
     margin-top: 16px;
 }
 
+.to-dos{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+
 .task-board-container{
     display: flex;
     justify-content: center;
