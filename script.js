@@ -72,7 +72,7 @@ async function loadTasks() {
     renderTasks();
     console.log(allTasks);
 }
-
+ 
 function checkOffToDos(checkbox) {
     let label = checkbox.nextElementSibling;
 
