@@ -5,7 +5,6 @@ let allTasks = [];
 function init() {
     document.getElementById('form').addEventListener('submit', addTask);
     loadTasks();
-    showUrlMessage();
 }
 
 async function addTask(event) {
