@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/assets.css">
 
     <script src="../script.js" defer></script>
+    <script src="../scripts/db.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +20,19 @@
 <body onload="init()">
 
     <main>
-
         <h1>My to do's</h1>
+        <div id="msgBox"></div>
+
 
         <div class="main-content-container">
             <form id="form">
                 <input class="task-input" id="task-input" type="text" required minlength="4">
                 <button class="btn btn-font submit-btn" type="submit">add to task</button>
             </form>
+
         </div>
+
+
 
         <div class="task-board-container">
             <div class="content-area" id="content-area"></div>

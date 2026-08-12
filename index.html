@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
 </head>
-<body> 
-    
-    <div class="login-section">
+
+<body onload="onloadFunc()">
+
+    <!-- <div>
         <input type="email" name="email" id="email" placeholder="Email">
         <input type="password" name="password" id="password" placeholder="Password">
         <button id="login-btn">Login</button>
-        <a href="./pages/todo.html">to do</a>
-    </div>
-    
+    </div> -->
+
+    <script>
+        function onloadFunc() {
+            checkActiveUser();
+        }
+
+        function checkActiveUser() {
+            if (sessionStorage.getItem('loggedInUser')) {
+                window.location.href = './pages/todo.html';
+            } else {
+                window.location.href = './pages/login.html';
+            }
+        }
+
+    </script>
+
+
+
 </body>
+
 </html>

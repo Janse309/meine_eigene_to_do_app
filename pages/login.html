@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <link rel="stylesheet" href="../styles/login.css">
+
+    <script src="../scripts/login.js" defer></script>
+    <script src="../scripts/db.js" defer></script>
+</head>
+
+<body>
+
+
+    <form onsubmit="login(); return false;">
+        <input type="email" id="email" required>
+        <input type="password" id="password" required>
+        <button>Login</button>
+    </form>
+    <button>Gastzugang</button>
+    <button>Registrieren</button>
+<br>
+<br>
+    <div id="msgBox"></div>
+
+</body>
+
+</html>

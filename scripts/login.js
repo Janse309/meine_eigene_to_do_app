@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
-
-    <script src="./scripts/db.js"></script>
-</head>
-
-<body>
-
-    <form onsubmit="login(); return false;">
-        <input type="email" id="email" required>
-        <input type="password" id="password" required>
-        <button>Login</button>
-    </form>
-    <button>Gastzugang</button>
-    <div id="msgBox"></div>
-
-    <script>
-
         function login() {
             let email = document.getElementById('email');
             let password = document.getElementById('password');
@@ -28,7 +5,7 @@
             console.log(user);
             if (user) {
                 console.log("user gefunden");
-                window.location.href = './pages/todo.html';
+                window.location.href = './todo.html';
             }
         }
 
@@ -46,8 +23,3 @@
         } else {
             // display:none;
         }
-
-    </script>
-</body>
-
-</html>
