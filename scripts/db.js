@@ -9,4 +9,4 @@ function addUser() {
     window.location.href = './login.html?msg=Du hast dich erfolgreich registriert'
 }
 
-    console.log(users);
+console.log(users);

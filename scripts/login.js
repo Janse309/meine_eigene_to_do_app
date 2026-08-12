@@ -2,7 +2,6 @@
             let email = document.getElementById('email');
             let password = document.getElementById('password');
             let user = users.find(user => user.email == email.value && user.password == password.value);
-            console.log(user);
             if (user) {
                 console.log("user gefunden");
                 window.location.href = './todo.html';
