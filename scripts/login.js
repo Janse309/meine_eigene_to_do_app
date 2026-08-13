@@ -22,7 +22,3 @@ if (msg) {
 } else {
     // display:none;
 }
-
-function navigateToRegister() {
-    window.location.href = './register.html';
-}
