@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Playpen Sans';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url(./fonts.css) format('woff2');
+  unicode-range: U+200d, U+2620, U+26a7, U+fe0f, U+1f308, U+1f38c, U+1f3c1, U+1f3f3-1f3f4, U+1f6a9, U+e0062-e0063, U+e0065, U+e0067, U+e006c, U+e006e, U+e0073-e0074, U+e0077, U+e007f;
+}
