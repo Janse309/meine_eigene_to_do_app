@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
 
+    <link rel="stylesheet" href="../styles/standart.css">
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/assets.css">
@@ -22,22 +23,36 @@
         <h1 class="to-do-headline">To-do's made simple</h1>
     </header>
 
-    <section class="log-in-section">
-        <div class="color-container">
+    <main class="login-main">
+
+        <section class="log-in-section">
             <h2>Logge dich ein oder Registriere dich</h2>
 
             <form class="log-in-form" onsubmit="login(); return false;">
-                <input type="email" id="email" required>
-                <input type="password" id="password" required>
-                <button class="login-btn">Login</button>
+                <h3>Login</h3>
+                <input type="email" id="email" required placeholder="E-Mail">
+                <input type="password" id="password" required placeholder="Passwort">
+                <div>
+                    <button class="login-btn btn">Sign in</button>
+                    <button class="register-btn btn">Gastzugang</button>
+                </div>
             </form>
 
-            <div class="register-btn-section">
-                <button class="register-btn">Gastzugang</button>
-                <button class="register-btn" onclick="navigateToRegister()">Registrieren</button>
+            <div>
+                <p class="continue">or continue with</p>
+                <button class="btn"><img src="../assets/icons/google-icon.svg" alt="google"></button>
+                <button class="btn"><img src="../assets/icons/git-hub-icon.svg" alt="github"></button>
+                <button class="btn"><img src="../assets/icons/facebook-icon.svg" alt=""></button>
             </div>
-        </div>
-    </section>
+
+            <div class="register-btn-section">
+                <p>Don't have an account yet ? <a href="./register.html">Register for free</a></p>
+                <!-- <button class="register-btn btn" onclick="navigateToRegister()">Registrieren</button> -->
+            </div>
+
+        </section>
+
+    </main>
 
     <div id="msgBox"></div>
 

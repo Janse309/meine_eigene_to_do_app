@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do Liste</title>
 
+    <link rel="stylesheet" href="../styles/standart.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/assets.css">
 
@@ -19,20 +20,16 @@
 
 <body onload="init()">
 
-    <main>
-        <h1>My to do's</h1>
+    <main class="to-do-main">
+        <h1 class="to-do-headline">My to do's</h1>
         <div id="msgBox"></div>
-
 
         <div class="main-content-container">
             <form id="form">
                 <input class="task-input" id="task-input" type="text" required minlength="4">
                 <button class="btn btn-font submit-btn" type="submit">add to task</button>
             </form>
-
         </div>
-
-
 
         <div class="task-board-container">
             <div class="content-area" id="content-area"></div>

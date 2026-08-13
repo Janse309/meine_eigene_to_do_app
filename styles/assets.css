@@ -4,7 +4,7 @@
     border: none;
 }
 
-.btn-font{
+.btn-font {
     font-family: "Playpen Sans", sans-serif;
 }
 
@@ -16,19 +16,31 @@
     font-weight: bold;
 }
 
-.to-do-btn{
+.to-do-btn {
     display: flex;
 }
 
-.to-do-btn img{
+.to-do-btn img {
     height: 20px;
     width: 20px;
 }
 
-.register-btn{
+.register-btn {
     font-family: 'Playpen Sans', Arial;
+    background-color: #6495ED;
+    padding: 8px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #fff8dc;
 }
 
-.login-btn{
+.login-btn {
     font-family: 'Playpen Sans', Arial;
+    background-color: #6495ED;
+    padding: 8px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #fff8dc;
 }

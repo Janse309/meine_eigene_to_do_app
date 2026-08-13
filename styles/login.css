@@ -3,29 +3,55 @@
     align-items: center;
     justify-content: center;
     font-family: 'Playpen Sans', Arial;
-    background-color: bisque;
+    background-color: #6495ED;
     height: 60px;
-    margin-bottom: 16px;
 }
 
 .to-do-headline{
     font-size: 40px;
+    color: white;
+}
+
+.login-main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: #27262C; */
+    height: 100vh;
 }
 
 .log-in-section{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     font-family: 'Playpen Sans', Arial;
-    /* width: 100%; */
     gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 600px;
+    height: 550px;
+    margin-top: 16px;
+    background-color: white;
+    border-radius: 16px;
 }
 
 .log-in-form{
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 8px;
+}
+
+.log-in-form input{
+    width: 300px;
+    padding: 4px;
+    border: 0.5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+
 }
 
 .register-btn-section {
@@ -36,13 +62,6 @@
     margin-top: 10px;
 }
 
-.color-container{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    background-color: aquamarine;
-    width: 900px;
-    padding: 36px;
+.continue{
+    text-align: center;
 }
-
