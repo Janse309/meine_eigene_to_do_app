@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/assets.css">
+    <link rel="stylesheet" href="../style.css">
 
     <script src="../scripts/login.js" defer></script>
     <script src="../scripts/db.js" defer></script>
@@ -17,21 +19,26 @@
 <body>
 
     <header class="login-header">
-        <h1>to-do's made simple</h1>
+        <h1 class="to-do-headline">To-do's made simple</h1>
     </header>
 
-    <form onsubmit="login(); return false;">
-        <input type="email" id="email" required>
-        <input type="password" id="password" required>
-        <button>Login</button>
-    </form>
+    <section class="log-in-section">
+        <div class="color-container">
+            <h2>Logge dich ein oder Registriere dich</h2>
 
-    <div class="register-btn-section">
-        <button>Gastzugang</button>
-        <button onclick="navigateToRegister()">Registrieren</button>
-    </div>
-    <br>
-    <br>
+            <form class="log-in-form" onsubmit="login(); return false;">
+                <input type="email" id="email" required>
+                <input type="password" id="password" required>
+                <button class="login-btn">Login</button>
+            </form>
+
+            <div class="register-btn-section">
+                <button class="register-btn">Gastzugang</button>
+                <button class="register-btn" onclick="navigateToRegister()">Registrieren</button>
+            </div>
+        </div>
+    </section>
+
     <div id="msgBox"></div>
 
 </body>
