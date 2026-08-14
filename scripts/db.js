@@ -1,5 +1,6 @@
 let users = JSON.parse(localStorage.getItem('users')) || [
-    { 'email': 'meinetestemail@gmail.com', 'password': 'test123' }
+    { 'email': 'meinetestemail@gmail.com', 'password': 'test123' },
+    { 'email': 'guestuser@web.com', 'password': 'myGuests123' }
 ];
 
 function addUser() {
