@@ -19,6 +19,28 @@ if (msg) {
             element.remove();
         }
     }, 3000);
-} else {
-    // display:none;
 }
+
+function loginAsGuest() {
+    let guestEmail = document.getElementById('email');
+    let guestPassword = document.getElementById('password');
+
+    guestEmail.value = 'guestuser@web.com';
+    guestPassword.value = 'myGuests123';
+    login();
+}
+
+let facebookSignIn = document.getElementById('facebook');
+facebookSignIn.addEventListener('click', () => {
+    window.location.href = 'https://www.facebook.com';
+});
+
+let githubSignIn = document.getElementById('github');
+githubSignIn.addEventListener('click', () => {
+    window.location.href = 'https://www.github.com';
+});
+
+let googleSignIn = document.getElementById('google');
+googleSignIn.addEventListener('click', () => {
+    window.location.href = 'https://www.google.com';
+});
