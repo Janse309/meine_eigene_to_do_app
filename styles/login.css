@@ -1,4 +1,4 @@
-.login-header{
+.login-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,25 +7,25 @@
     height: 60px;
 }
 
-.to-do-headline{
+.to-do-headline {
     font-size: 40px;
     color: white;
 }
 
-.login-main{
+.login-main {
     display: flex;
     justify-content: center;
     height: 100vh;
 }
 
-.log-in-section{
+.log-in-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     font-family: 'Playpen Sans', Arial;
     gap: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 600px;
     height: 550px;
     margin-top: 16px;
@@ -33,21 +33,25 @@
     border-radius: 16px;
 }
 
-.log-in-form{
+.log-in-form {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 8px;
 }
 
-.log-in-form input{
+.log-in-form input {
     width: 300px;
     padding: 4px;
     border: 0.5px;
     border: none;
     border-radius: 8px;
     outline: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.continue {
     text-align: center;
 }
 
@@ -59,6 +63,10 @@
     margin-top: 10px;
 }
 
-.continue{
-    text-align: center;
+.register-link{
+    text-decoration: none;
+}
+
+.register-link:visited{
+    color: #6495ED;
 }
