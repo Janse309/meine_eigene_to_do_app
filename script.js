@@ -13,7 +13,7 @@ async function addTask(event) {
     let inputContent = document.getElementById('task-input');
     let taskInput = inputContent.value;
     let response = await postData("tasks", { Aufgabe: taskInput });
-    allTasks.push({ Aufgabe: taskInput, id: response.name});
+    allTasks.push({ Aufgabe: taskInput, id: response.name });
 
     renderTasks();
     inputContent.value = "";
@@ -41,12 +41,17 @@ function renderTasks() {
 }
 
 async function postData(path = "", data = {}) {
-    let response = await fetch(BASE_URL + path + ".json", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json', },
-        body: JSON.stringify(data)
-    });
-    return responseToJson = await response.json();
+    try {
+        let response = await fetch(BASE_URL + path + ".json", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json', },
+            body: JSON.stringify(data)
+        });
+        return responseToJson = await response.json();
+    } catch (error) {
+        console.error('Fehler beim Hochladen der Daten', error);
+        // hier eine DOM Manipulation erstellen
+    }
 }
 
 async function getData(path = "") {
@@ -72,7 +77,7 @@ async function loadTasks() {
     renderTasks();
     console.log(allTasks);
 }
- 
+
 function checkOffToDos(checkbox) {
     let label = checkbox.nextElementSibling;
 
