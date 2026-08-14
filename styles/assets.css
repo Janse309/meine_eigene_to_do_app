@@ -10,10 +10,11 @@
 
 .submit-btn {
     padding: 8px;
-    background-color: white;
+    background-color: #6495ED;
     border-radius: 8px;
     width: 250px;
     font-weight: bold;
+    color: white;
 }
 
 .to-do-btn {

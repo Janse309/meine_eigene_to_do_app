@@ -30,13 +30,7 @@ function renderTasks() {
     let taskRef = document.getElementById('content-area');
     taskRef.innerHTML = "";
     for (let i = 0; i < allTasks.length; i++) {
-        taskRef.innerHTML += `
-            <ul class="to-dos">
-                <input type="checkbox" name="task" onchange="checkOffToDos(this)">
-                <span>${allTasks[i].Aufgabe}</span>
-                <button class="btn to-do-btn" onclick="deleteTask(${i})" class="btn-font"><img src="../assets/icons/delete-icon.svg" alt="delete"></button>
-            </ul>
-                `
+        taskRef.innerHTML += getTaskTemplate(i)
     }
 }
 
