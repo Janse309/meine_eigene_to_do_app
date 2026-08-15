@@ -4,7 +4,7 @@ function login() {
     let user = users.find(user => user.email == email.value && user.password == password.value);
     if (user) {
         console.log("user gefunden");
-        window.location.href = './todo.html';
+        window.location.href = './board.html';
     }
 }
 

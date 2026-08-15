@@ -7,12 +7,23 @@
     <title>Register</title>
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <link rel="stylesheet" href="../styles/standart.css">
+
+    <!-- CSS Dateien für jede HTML Datei -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/assets.css">
+    <link rel="stylesheet" href="../styles/standart.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+
     <script src="../scripts/db.js" defer></script>
     <script src="../script.js" defer></script>
     <script src="../scripts/firebase.js" defer></script>
 </head>
 
 <body>
+
+    <header class="page-header">
+        <h1 class="page-headline">To-do's made simple</h1>
+    </header>
 
     <form id="register-form" onsubmit="registerUser(); return false;">
         <input type="email" id="email" required>

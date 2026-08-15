@@ -42,7 +42,7 @@ async function deleteTask(i) {
 }
 
 function renderTasks() {
-    let taskRef = document.getElementById('content-area');
+    let taskRef = document.getElementById('taskboard-content');
     taskRef.innerHTML = "";
     for (let i = 0; i < allTasks.length; i++) {
         taskRef.innerHTML += getTaskTemplate(i)

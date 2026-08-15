@@ -1,13 +1,29 @@
-.to-do-headline {
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playpen Sans', Arial;
+    background-color: #6495ED;
+    height: 60px;
+    width: 100%;
+}
+
+.page-headline {
     text-align: center;
     color: white;
     font-size: 40px;
 }
 
-.to-do-main {
+.board-main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+}
+
+.task-input-container {
+    display: flex;
+    margin-top: 16px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .task-input {
@@ -21,34 +37,27 @@
     font-family: "Playpen Sans", sans-serif;
 }
 
-.main-content-container {
-    display: flex;
-    margin-top: 16px;
-    flex-direction: column;
-    align-items: center;
-}
-
 ul {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
 }
 
-.content-area {
-    margin-top: 16px;
-}
-
-.to-dos {
-    display: flex;
-    align-items: center;
-}
-
-.task-board-container {
+.taskboard-content-container {
     display: flex;
     justify-content: center;
 }
 
+.taskboard-content {
+    margin-top: 16px;
+}
+
 .task-card-container {
+    display: flex;
+    align-items: center;
+}
+
+.task-item {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -4,11 +4,12 @@
 
 button{
     cursor: pointer;
+    font-family: 'Playpen Sans', sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: "Playpen Sans", sans-serif;
+    font-family: 'Playpen Sans', sans-serif;
 }
 
 h1 {
