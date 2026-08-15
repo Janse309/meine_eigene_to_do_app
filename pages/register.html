@@ -7,14 +7,16 @@
     <title>Register</title>
     <link rel="stylesheet" href="../styles/standart.css">
     <script src="../scripts/db.js" defer></script>
+    <script src="../script.js" defer></script>
+    <script src="../scripts/firebase.js" defer></script>
 </head>
 
 <body>
-    
-    <form onsubmit="addUser(); return false;">
-        <input type="email" id="email" required> 
+
+    <form id="register-form" onsubmit="registerUser(); return false;">
+        <input type="email" id="email" required>
         <input type="password" id="password" required>
-        <button>register</button>
+        <button>Benutzer hinzufügen</button>
     </form>
 
 </body>

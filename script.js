@@ -1,6 +1,7 @@
 const BASE_URL = "https://neuesprojekt-39186-default-rtdb.europe-west1.firebasedatabase.app/";
 
 let allTasks = [];
+let allUsers = [];
 
 function init() {
     document.getElementById('form').addEventListener('submit', addTask);
@@ -19,6 +20,20 @@ async function addTask(event) {
     inputContent.value = "";
 }
 
+async function registerUser() {
+    try {
+        let registerform = document.getElementById('register-form');
+        let email = document.getElementById('email');
+        let password = document.getElementById('password');
+        let response = await postData('users', { email: email.value, password: password.value });
+        allUsers.push({ id: response.name, email: email.value, password: password.value });
+        email.value = "";
+        password.value = "";
+    } catch (error) {
+        console.error("Fehler beim Hochladen der Userdaten", error);
+    }
+}
+
 async function deleteTask(i) {
     let id = allTasks[i].id;
     allTasks.splice(i, 1);
@@ -32,33 +47,6 @@ function renderTasks() {
     for (let i = 0; i < allTasks.length; i++) {
         taskRef.innerHTML += getTaskTemplate(i)
     }
-}
-
-async function postData(path = "", data = {}) {
-    try {
-        let response = await fetch(BASE_URL + path + ".json", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json', },
-            body: JSON.stringify(data)
-        });
-        return responseToJson = await response.json();
-    } catch (error) {
-        console.error('Fehler beim Hochladen der Daten', error);
-        // hier eine DOM Manipulation erstellen
-    }
-}
-
-async function getData(path = "") {
-    let response = await fetch(BASE_URL + path + ".json");
-    return data = await response.json();
-}
-
-async function deleteData(path = "") {
-    let response = await fetch(BASE_URL + path + ".json", {
-        method: "DELETE",
-    });
-    console.log(path)
-    return responseToJson = await response.json();
 }
 
 async function loadTasks() {
