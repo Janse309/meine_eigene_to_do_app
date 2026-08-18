@@ -31,9 +31,8 @@
             <h2>Logge dich ein oder Registriere dich</h2>
 
             <form class="log-in-form" onsubmit="login(); return false;">
-                <h3>Login</h3>
-                <input type="email" id="email" required placeholder="E-Mail">
-                <input type="password" id="password" required placeholder="Passwort">
+                <label for="email">E-Mail:</label><input type="email" id="email" required>
+                <label for="password">Passwort:</label><input type="password" id="password" required>
                 <div>
                     <button class="sign-in-action-btn btn">Sign in</button>
                     <button onclick="loginAsGuest()" class="sign-in-action-btn btn">Gastzugang</button>
