@@ -1,7 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .login-main {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    flex: 1;
 }
 
 .log-in-section {
