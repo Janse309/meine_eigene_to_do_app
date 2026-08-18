@@ -5,8 +5,16 @@ function login() {
     if (user) {
         console.log("user gefunden");
         window.location.href = './board.html';
+    } else {
+        password.setCustomValidity("user not found");
+        password.reportValidity();
     }
 }
+
+document.getElementById('password').addEventListener('input', () => {
+    document.getElementById('password').setCustomValidity('');
+});
+
 
 const urlParams = new URLSearchParams(window.location.search);
 const msg = urlParams.get('msg');
