@@ -22,13 +22,13 @@ async function addTask(event) {
 
 async function registerUser() {
     try {
-        let registerform = document.getElementById('register-form');
         let email = document.getElementById('email');
         let password = document.getElementById('password');
-        let response = await postData('users', { email: email.value, password: password.value });
-        allUsers.push({ id: response.name, email: email.value, password: password.value });
-        email.value = "";
-        password.value = "";
+        let phoneNumber = document.getElementById('tel');
+        let response = await postData('users', { email: email.value, password: password.value, phoneNumber: phoneNumber.value });
+        allUsers.push({ id: response.name, email: email.value, password: password.value, phoneNumber: phoneNumber.value});
+        let registerForm = document.getElementById('register-form');
+        registerForm.reset(); // dazu noch eine Notiz machen
     } catch (error) {
         console.error("Fehler beim Hochladen der Userdaten", error);
     }
