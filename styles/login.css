@@ -16,6 +16,7 @@
     margin-top: 16px;
     background-color: white;
     border-radius: 16px;
+    color: #6495ED;
 }
 
 .log-in-form {
@@ -27,13 +28,16 @@
 
 .log-in-form input {
     width: 300px;
-    padding: 4px;
-    border: 0.5px;
+    padding: 5px;
     border: none;
     border-radius: 8px;
     outline: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
+}
+
+.log-in-form span{
+    font-weight: bold;
 }
 
 .continue {
@@ -50,8 +54,15 @@
 
 .register-link{
     text-decoration: none;
+    font-weight: bold;
 }
 
 .register-link:visited{
     color: #6495ED;
+}
+
+@media(max-height: 633px) {
+    .log-in-section {
+        height: 450px;
+    }
 }
