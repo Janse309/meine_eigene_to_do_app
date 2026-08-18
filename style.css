@@ -1,3 +1,9 @@
+.content-wrapper{
+    margin: auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
 .page-header {
     display: flex;
     align-items: center;
@@ -76,4 +82,14 @@ ul {
 
 .checked {
     text-decoration: line-through;
+}
+
+.page-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playpen Sans', Arial;
+    background-color: #6495ED;
+    height: 60px;
+    width: 100%;
 }
