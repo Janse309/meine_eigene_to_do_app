@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../styles/standart.css">
     <link rel="stylesheet" href="../styles/fonts.css">
 
+    <!-- nur für diese Datei -->
+    <link rel="stylesheet" href="../styles/register.css">
+
     <script src="../scripts/db.js" defer></script>
     <script src="../script.js" defer></script>
     <script src="../scripts/firebase.js" defer></script>
@@ -22,15 +25,33 @@
 <body>
 
     <header class="page-header">
-        <h1 class="page-headline">To-do's made simple</h1>
+        <div class="content-wrapper">
+            <h1 class="page-headline">To-do's made simple</h1>
+        </div>
     </header>
 
-    <form id="register-form" onsubmit="registerUser(); return false;">
-        <input type="email" id="email" required>
-        <input type="password" id="password" required>
-        <button>Benutzer hinzufügen</button>
-    </form>
+    <main class="register-main">
 
+        <section class="register-section content-wrapper">
+            <h2 class="register-section-heading">Registrieren</h2>
+
+            <form name="contact-form" class="register-form" id="register-form" onsubmit="registerUser(); return false;">
+                <span>Vorname:</span><input type="text" required>
+                <span>Nachname:</span><input type="text" required>
+                <span>E-Mail:</span><input type="email" id="email" required>
+                <span>Passwort:</span><input type="password" id="password" required>
+                <span>Telefonnummer:</span><input id="tel" type="tel" required>
+                <div class="center-button">
+                    <button class="add-user-btn btn">Benutzer hinzufügen</button>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="page-footer"></footer>
 </body>
 
 </html>
