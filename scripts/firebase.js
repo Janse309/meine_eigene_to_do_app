@@ -24,3 +24,17 @@ async function postData(path = "", data = {}) {
         // hier eine DOM Manipulation erstellen
     }
 }
+
+async function patchData(path = "", data = {}) {
+    try {
+        let response = await fetch(BASE_URL + path + ".json", {
+            method: "PATCH",
+            headers: { 'Content-Type': 'application/json', },
+            body: JSON.stringify(data)
+        });
+        return responseToJson = await response.json();
+    } catch (error) {
+        console.error('Fehler beim Hochladen der Daten', error);
+        // hier eine DOM Manipulation erstellen
+    }
+}
