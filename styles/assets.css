@@ -17,11 +17,6 @@
     display: flex;
 }
 
-.to-do-btn img {
-    height: 20px;
-    width: 20px;
-}
-
 .sign-in-action-btn {
     background-color: #6495ED;
     padding: 8px;
