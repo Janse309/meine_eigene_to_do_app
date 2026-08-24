@@ -34,8 +34,27 @@
             </form>
         </div>
 
-        <div class="taskboard-content-container">
-            <div class="taskboard-content" id="taskboard-content"></div>
+        <div class="board-section-wrapper content-wrapper">
+
+            <section class="taskboard-content-container">
+                <h2 class="card-container-heading">To do</h2>
+                <div id="to-dos" class="taskboard-content drag-area" ondragover="allowDrop(event)" ondrop="dropElement(event, 'to-dos')"></div>
+            </section>
+
+            <section class="board-section">
+                <h2 class="card-container-heading">In progress</h2>
+                <div id="in-progress" class="category-container drag-area" ondragover="allowDrop(event)" ondrop="dropElement(event, 'in-progress')"></div>
+            </section>
+
+            <section>
+                <h2 class="card-container-heading">Await Feedback</h2>
+                <div id="await-feedback" class="taskboard-content drag-area" ondragover="allowDrop(event)" ondrop="dropElement(event, 'await-feedback')"></div>
+            </section>
+
+            <section>
+                <h2 class="card-container-heading">Done</h2>
+                <div id="done" class="taskboard-content drag-area" ondragover="allowDrop(event)" ondrop="dropElement(event, 'done')" ondragend="allowDrop(event)"></div> <!--hier werden die drag Funktionen reingeschrieben-->
+            </section>
         </div>
 
     </main>
