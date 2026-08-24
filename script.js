@@ -1,7 +1,10 @@
 const BASE_URL = "https://neuesprojekt-39186-default-rtdb.europe-west1.firebasedatabase.app/";
 
+let currentDraggedElement = null;
 let allTasks = [];
 let allUsers = [];
+let categoryColumns = ["to-dos", "in-progress", "await-feedback", "done"];
+
 
 function init() {
     document.getElementById('form').addEventListener('submit', addTask);
@@ -26,7 +29,7 @@ async function registerUser() {
         let password = document.getElementById('password');
         let phoneNumber = document.getElementById('tel');
         let response = await postData('users', { email: email.value, password: password.value, phoneNumber: phoneNumber.value });
-        allUsers.push({ id: response.name, email: email.value, password: password.value, phoneNumber: phoneNumber.value});
+        allUsers.push({ id: response.name, email: email.value, password: password.value, phoneNumber: phoneNumber.value });
         let registerForm = document.getElementById('register-form');
         registerForm.reset(); // dazu noch eine Notiz machen
     } catch (error) {
@@ -42,7 +45,7 @@ async function deleteTask(i) {
 }
 
 function renderTasks() {
-    let taskRef = document.getElementById('taskboard-content');
+    let taskRef = document.getElementById('to-dos');
     taskRef.innerHTML = "";
     for (let i = 0; i < allTasks.length; i++) {
         taskRef.innerHTML += getTaskTemplate(i)
@@ -70,14 +73,17 @@ function checkOffToDos(checkbox) {
     }
 }
 
+function startDragging(id) {
+    currentDraggedElement = id; // hier wird die id des gerade gezogenen Elements in der globalen Variable currentDraggedElement gespeichert.
+}
 
+function allowDrop(event) { // damit sage ich dem browser hier ist droppen erlaubt (Browser blockieren standmäßig das droppen)
+    event.preventDefault();
+}
 
+function dropElement(event) {
+    event.preventDefault(); //verhindert das Standardverhalten des Browsers (z. B. dass ein Link geöffnet oder Text abgelegt wird).
 
-// papierkorb icon hinzufügen
-// deleteData Dokumentation lesen
-
-// - allTasks ist jetzt ein Array von Objekten -> task.Aufgabe statt allTasks[i]
-// - onchange ruft toggleTask() mit der id des Tasks und this.checked (neuer Checkbox-Zustand) auf
-// - ${task.erledigt ? "checked" : ""} sorgt dafür, dass bereits erledigte Tasks nach
-//   einem Reload auch als angehakt angezeigt werden
-
+    let taskElement = document.getElementById(`task-${currentDraggedElement}`); //holt sich das DOM-Element der Task-Karte anhand der zuvor instartDragging` gespeicherten ID.
+    event.currentTarget.appendChild(taskElement); //hängt diese Karte in den Container ein, auf den gedroppt wurde (event.currentTarget = die Drop-Zone, z. B. #done).
+}
