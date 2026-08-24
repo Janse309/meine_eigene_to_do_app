@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-button{
+button {
     cursor: pointer;
     font-family: 'Playpen Sans', sans-serif;
 }
@@ -27,3 +27,7 @@ h3 {
     margin-block-start: 0;
 }
 
+p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
